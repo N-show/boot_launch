@@ -42,7 +42,7 @@ public class ArticleRestController {
     @GetMapping("/article/{id}")
     public AjaxResponse getArticle(@PathVariable Long id) {
 
-        Article article1 = Article.builder().id(1L).author("zimug").content("spring boot 2.深入浅出").createTime(new Date()).title("t1").build();
+        Article article1 = Article.builder().id(1L).author("nsh").content("spring boot 2.深入浅出").createTime(new Date()).title("t1").build();
         return AjaxResponse.success(article1);
     }
 }
