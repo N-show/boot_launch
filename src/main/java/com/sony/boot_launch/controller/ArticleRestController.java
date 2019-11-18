@@ -2,9 +2,11 @@ package com.sony.boot_launch.controller;
 
 import com.sony.boot_launch.model.AjaxResponse;
 import com.sony.boot_launch.model.Article;
+import com.sony.boot_launch.service.ArticleRestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 @Slf4j
@@ -13,11 +15,17 @@ import java.util.Date;
 public class ArticleRestController {
 
 
+    @Resource
+    ArticleRestService articleRestService;
+
     //    @RequestMapping(value = "/article", method = POST, produces = "application/json")
     @PostMapping("/article")
     public AjaxResponse saveArticle(@RequestBody Article article) {
 
         log.info("saveArticle：{}", article);
+
+        articleRestService.saveArticle(article);
+
         return AjaxResponse.success(article);
     }
 
