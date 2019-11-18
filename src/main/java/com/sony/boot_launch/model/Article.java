@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * @author nsh
  * @date 2019/11/17 22:19:27
@@ -16,8 +19,35 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor     //此注解 lombok 插件里的, 意思是所有参数的构造函数
 public class Article {
 
-    private Long id;
 
+    /**
+     * id : 1
+     * author : nsh
+     * title : 开发spring boot
+     * content : big data
+     * createTime :
+     * reader : [{"name":"nsh","age":18},{"name":"kobe","age":37}]
+     */
+
+    /**
+     * json串
+     * <p>
+     * {
+     * "id": 1,
+     * "author": "nsh",
+     * "title": "开发spring boot",
+     * "content": "big data",
+     * "createTime": "",
+     * "reader":[{"name":"nsh","age":18},{"name":"kobe","age":37}]
+     * }
+     */
+
+
+    private Long id;
     private String author;
+    private String title;
+    private String content;
+    private Date createTime;
+    private List<Reader> reader;
 
 }

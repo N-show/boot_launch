@@ -2,11 +2,7 @@ package com.sony.boot_launch.controller;
 
 import com.sony.boot_launch.model.Article;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,9 +20,9 @@ public class HelloController {
 
     @RequestMapping("/hello")       //接受来自浏览器的hello请求 localhost:8080/hello
     public Article hello() {
-        Article nsh = new Article(1L, "nsh");
-        Article article = new Article();
-        nsh.setAuthor("zimug");
+//        Article nsh = new Article(1L, "nsh");
+//        Article article = new Article();
+//        nsh.setAuthor("zimug");
 
         Article haha = Article.builder().id(2L).author("haha").build();
 

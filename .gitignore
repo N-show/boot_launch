@@ -31,4 +31,4 @@ build/
 .vscode/
 
 ### Mac Directory ###
-*/.DS_Store
+.DS_Store
